@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vibeon — Музыка без интернета</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+      
+            body {
+                margin: 0;
+                font-family: "Inter", sans-serif;
+                background-color: #ffffff;
+                color: #1C1C1E;
+                overflow-x: hidden;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 48px;
+                margin-bottom: 0;
+                
+                /* Градиент для текста */
+                background: linear-gradient(90deg, #531eff, #2C358F);
+                
+                /* Чтобы фон применялся только к тексту */
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                /* Для Firefox */
+                background-clip: text;
+                color: transparent;
+                text-align: center;
+            }
+
+            h4 {
+                font-size: 24px;
+                margin-bottom: 30px;
+                margin-top: 10px;
+                
+                /* Градиент для текста */
+                background: linear-gradient(90deg, hsl(254, 100%, 88%), #5866ff);
+                
+                /* Чтобы фон применялся только к тексту */
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                /* Для Firefox */
+                background-clip: text;
+                color: transparent;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 30px;
+                margin-bottom: 0;
+                
+                /* Градиент для текста */
+                background: linear-gradient(90deg, #531eff, #2C358F);
+                
+                /* Чтобы фон применялся только к тексту */
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                /* Для Firefox */
+                background-clip: text;
+                color: transparent;
+                text-align: center;
+            }
+
+            p {
+                font-style: bold;
+                text-align: center;
+            }
+        
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 60px;
+            }
+        
+            .logo {
+                font-size: 28px;
+                font-weight: 600;
+                color: #2C358F;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        
+            .wave {
+                width: 28px;
+                height: 10px;
+                background: linear-gradient(90deg, #2C358F 0%, #4F5FE3 100%);
+                border-radius: 50px;
+                animation: wave 2s ease-in-out infinite alternate;
+            }
+        
+            @keyframes wave {
+                0% { transform: scaleX(1); opacity: 1; }
+                100% { transform: scaleX(1.5); opacity: 0.8; }
+            }
+        
+            nav a {
+                margin-left: 30px;
+                text-decoration: none;
+                color: #1C1C1E;
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+        
+            nav a:hover {
+                color: #2C358F;
+            }
+        
+            .hero {
+                text-align: center;
+                padding: 100px 20px 80px;
+            }
+        
+
+        
+            .hero p {
+                font-size: 20px;
+                color: #4A4A4A;
+                margin-bottom: 40px;
+            }
+        
+            .btn {
+                display: block;
+                background-color: #2C358F;
+                color: white;
+                padding: 15px 30px;
+                border-radius: 40px;
+                font-weight: 600;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                transition: 0.3s;
+                margin: 30px auto;
+            }
+        
+            .btn:hover {
+                background-color: #4F5FE3;
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(44, 53, 143, 0.3);
+            }
+        
+            .section {
+                max-width: 1000px;
+                margin: 80px auto;
+                text-align: center;
+                padding: 0 20px;
+            }
+        
+            .section h2 {
+                font-size: 32px;
+                margin-bottom: 20px;
+                color: #2C358F;
+            }
+        
+            footer {
+                text-align: center;
+                padding: 50px 20px;
+                background-color: #F2F2F7;
+                color: #6C6C6C;
+                font-size: 14px;
+            }
+
+            .nevesttech {
+                margin-bottom: 40px;
+            }
+
+            table {
+                margin: 30px auto;
+                align-items: center;
+                text-align: center;
+            }
+        </style> 
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <div class="wave"></div>
+                Vibeon
+            </div>         
+            <nav>
+              <a href="index.html">Главная</a>
+              <a href="index.html">Функции</a>
+              <a href="premium.html">Премиум</a>
+              <a href="auth.html">Войти</a>
+            </nav>
+        </header>
+        <h1>Premium.</h1>
+        <h4>Выведи музыку на новый уровень.</h4>
+        <button class="btn">Купить сейчас</button>
+        <h2>Новейшие технологии</h2>
+        <p class="nevesttech">Получите новейшие возможности мира первыми всего за 5usd</p>
+        <h2>Infinity AutoVibe.</h2>
+        <p class="nevesttech">Получайте удовольствие от каждого сделаного плейлиста по вашим интересам</p>
+        <h2>Сравните Standart. и Premium.</h2>
+        <table border="1" cellspacing="0" cellpadding="10">
+            <tr>
+              <th>Функция</th>
+              <th>Standart.</th>
+              <th>Premium.</th>
+            </tr>
+            <tr>
+              <td>Infinite AutoVibe</td>
+              <td>-</td>
+              <td>+</td>
+            </tr>
+            <tr>
+              <td>Smart Cache</td>
+              <td>50 песен</td>
+              <td>Бесконечные песни</td>
+            </tr>
+          </table>
+        <footer>© Vibeon 2025</footer>
+    </body>
+</html>

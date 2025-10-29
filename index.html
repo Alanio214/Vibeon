@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibeon — Музыка без интернета</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background-color: #ffffff;
+      color: #1C1C1E;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 600;
+      color: #2C358F;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .wave {
+      width: 28px;
+      height: 10px;
+      background: linear-gradient(90deg, #2C358F 0%, #4F5FE3 100%);
+      border-radius: 50px;
+      animation: wave 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes wave {
+      0% { transform: scaleX(1); opacity: 1; }
+      100% { transform: scaleX(1.5); opacity: 0.8; }
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #1C1C1E;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #2C358F;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 80px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #4A4A4A;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      background-color: #2C358F;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 40px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #4F5FE3;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(44, 53, 143, 0.3);
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #2C358F;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #F2F2F7;
+      color: #6C6C6C;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        <div class="wave"></div>
+        Vibeon
+    </div>         
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="index.html">Функции</a>
+      <a href="premium.html">Премиум</a>
+      <a href="auth.html">Войти</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Музыка без интернета</h1>
+    <p>Слушай, где бы ты ни был — Vibeon всегда с тобой.</p>
+    <button class="btn">Попробовать бесплатно</button>
+  </section>
+
+  <section class="section">
+    <h2>Smart Cache</h2>
+    <p>Vibeon автоматически сохраняет твою любимую музыку и подбирает треки, даже без сети. Просто слушай — остальное он сделает сам.</p>
+  </section>
+
+  <section class="section">
+    <h2>AutoVibe</h2>
+    <p>Наш ИИ анализирует твои вкусы и создаёт офлайн-плейлисты под настроение. Без рекламы. Без задержек. Без интернета.</p>
+  </section>
+
+  <footer>
+    © 2025 Vibeon. Все права защищены.
+  </footer>
+
+</body>
+</html>

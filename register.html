@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibeon — Вход</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+        background-color: #ffffff;
+        color: #111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+        width: 90%;
+        max-width: 380px;
+      }
+
+      .logo {
+        font-size: 36px;
+        font-weight: 700;
+        color: #000;
+        letter-spacing: -0.5px;
+        margin-bottom: 40px;
+      }
+
+
+      input {
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 12px;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        font-size: 16px;
+        outline: none;
+        transition: border 0.2s;
+      }
+
+      input:focus {
+        border-color: #007aff;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        background-color: #007aff;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      button:hover {
+        background-color: #0062cc;
+      }
+
+      .alt {
+        margin-top: 16px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .alt a {
+        color: #007aff;
+        text-decoration: none;
+      }
+
+      .alt a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">Vibeon</div>
+      <form>
+        <input id="regUser" type="text" placeholder="Email" required>
+        <input id="regPass" type="password" placeholder="Пароль" required>
+        <input type="zaklepka" placeholder="Повторите Пароль" required>
+        <button onclick="registerUser()" type="submit">Войти</button>
+
+        <script>
+            async function registerUser() {
+                const username = document.getElementById('regUser').value;
+                const password = document.getElementById('regPass').value;
+            
+                const res = await fetch('/api/register', {
+                    method: 'POST',
+                    headers: {'Content-Type':'application/json'},
+                    body: JSON.stringify({username, password})
+                });
+                const data = await res.json();
+                alert(data.error || data.message);
+            }
+            </script>
+      </form>
+      <div class="alt">
+        Есть аккаунт? <a href="auth.html">Войти</a><br>
+      </div>
+    </div>
+
+    <footer>© Vibeon 2025</footer>
+  </body>
+</html>
